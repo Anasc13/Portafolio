@@ -1,0 +1,18 @@
+<div
+class="job"
+[ngClass]="{ edit: job.edit }"
+(click)="onToggle(job)"
+>
+    <h3>
+        {{job.puesto}}
+        <fa-icon
+        [icon]="faTimes"
+        [ngStyle]="{'color':'red'}"
+        (click)="onDelete(job)">
+        ></fa-icon> 
+    
+    </h3>
+    <p>
+        {{job.periodo}}
+    </p>
+</div>

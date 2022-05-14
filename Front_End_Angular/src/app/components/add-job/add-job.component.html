@@ -1,0 +1,57 @@
+<form class="add-form" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddJob"
+>
+     <div class="form-control">
+         <label for="empresa">Empresa</label>
+         <input type="text" 
+         name="empresa" 
+         id="empresa" 
+         placeholder="Add empresa"
+         [(ngModel)]="empresa"
+         />
+     </div>
+     
+     <div class="form-control">
+        <label for="puesto">Puesto</label>
+        <input type="text" 
+        name="puesto" 
+        id="puesto" 
+        placeholder="Add puesto" 
+        [(ngModel)]="puesto"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="periodo">Periodo</label>
+        <input type="text" 
+        name="periodo" 
+        id="periodo" 
+        placeholder="Add periodo" 
+        [(ngModel)]="periodo"
+        />
+    </div>
+
+    <div class="form-control">
+        <label for="tareas">Tareas</label>
+        <input type="text" 
+        name="tareas" 
+        id="tareas" 
+        placeholder="Add tareas" 
+        [(ngModel)]="tareas"
+        />
+    </div>
+
+    <div class="form-control-check">
+        <label for="edit">Edit</label>
+        <input type="checkbox" 
+        name="edit" 
+        id="edit"
+        [(ngModel)]="edit"
+        />
+    </div>
+
+   
+    <input type="submit" value="Save Job" class="btn btn-block">
+
+</form>

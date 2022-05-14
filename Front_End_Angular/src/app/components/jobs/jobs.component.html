@@ -1,0 +1,11 @@
+<app-add-job
+(onAddJob)="AddJob($event)"
+> </app-add-job>
+<app-Jobs-item
+    *ngFor="let job of jobs"
+    [job] = "job"
+    (OnDeleteJob) ="deleteJob(job)"
+    (OnToggleEdit) ="toggleEdit(job)"
+    
+>
+</app-Jobs-item>
