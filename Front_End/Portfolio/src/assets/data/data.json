@@ -1,0 +1,74 @@
+{
+"LogoAP":"assets/Images/solo_logo.png",
+"backImage": "assets/Images/bosques2.png",
+"profileImage": "assets/Images/Perfil_circle.JPG",
+"name": "Ana Santa Cruz",
+"postition": "Analista de datos",
+"ubication": "Salta (Argentina)",
+"company": {
+    "name": "OVcM",
+    "img": "assets/Images/Logo_ovcm.png",
+    "url": "http://ovcmsalta.gob.ar/"
+},
+"about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada.",
+
+"experience": [{
+    "position":"Analista de datos",
+    "company":"Observatorio de Violencia contra las Mujeres",
+    "img":"assets/Images/Logo_ovcm.png",
+    "mode":"part-time",
+    "start":"2019",
+    "end":"a la actualidad",
+    "timeElapsed": "3 años"
+}],
+
+"education": [{
+    "school":"Universidad de Buenos Aires",
+    "title":"Licenciada",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
+    "career": "Sociología",
+    "score": 8.7,
+    "start": 2003,
+    "end": 2008
+},
+{
+    "school":"Universidad de Buenos Aires",
+    "title":"Magister",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
+    "career": "Maestría en Políticas Ambientales y Territoriales",
+    "score": 0,
+    "start": 2013,
+    "end": "a la actualidad"
+}
+],
+
+"skills": [{
+    "name": "Soft skills",
+    "img": "assets/Images/soft.png"
+},
+{
+    "name": "Hard skills",
+    "img": ""
+},
+{
+    "name": "Lenguajes",
+    "img":""
+},
+{
+    "name": "Software",
+    "img": ""
+},
+{
+    "name": "Idiomas",
+    "img": ""
+}
+],
+"achivements": [{
+    "name":" "
+},
+{
+    "name":" "
+}
+]
+
+}

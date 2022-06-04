@@ -1,0 +1,43 @@
+{
+"soft_skills": {
+    "Aptitudes interpersonales": 100,
+    "Facilidad de Comunicación": 100,
+    "Trabajo en equipo": 100,
+    "Resolución de problemas":100,
+    "Asertividad":100,
+    "Uso eficiente del tiempo": 90,
+    "Pensamiento analítico": 100 
+},
+"hard_skills": {
+    "Diseño de sistemas": 30,
+    "Programación": 50,
+    "lenguajes-programacion": [{
+        "R": 90,
+        "Typescript":50,
+        "JavaScript": 50
+        }],
+    "programas": [{
+        "VSC":90,
+        "R Studio":90,
+        "QGIS":90,
+        "MySQL":60,
+        "Netbeans":50,
+        "Spring Boot":50
+        }],
+"Idiomas":[{
+    "language": "Inglés",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/200px-Flag_of_the_United_Kingdom.svg.png",
+    "level": 100
+    },
+    {
+    "language": "Francés",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg/200px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg.png",
+    "level": 100 
+    },
+    {
+    "language": "Italiano",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/200px-Flag_of_Italy.svg.png",
+    "level": 50
+    }]
+}
+}

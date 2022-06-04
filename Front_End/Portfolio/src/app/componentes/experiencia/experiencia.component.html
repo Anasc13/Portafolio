@@ -1,0 +1,35 @@
+<div class="card mat-card">
+    <div id="experience">
+    <div class="card-title">
+      <h2>Experiencia</h2>
+      <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
+    </div>
+    <div>
+      <ul class="items-list">
+        <li *ngFor="let experience of experienceList">
+          <div class="data-container">
+            <div class="logo-image-container">
+              <a href="#">
+              <img class="logo-image" [src]="experience.img">
+            </a> 
+          </div>
+          </div>
+        <div class="list-info">
+          <div id="boton-agregar" class="data-control">
+            <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+            <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
+        </div>
+        <div>
+            <h4>{{experience.position}} en {{experience.company}}</h4>
+            <p>Modalidad: {{experience.mode}}</p>
+            <p>Año de inicio: {{experience.start}}</p>
+            <p>Año de finalización: {{experience.end}} Tiempo total: {{experience.timeElapsed}}</p>            
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  
+  
