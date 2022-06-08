@@ -1,18 +1,24 @@
 <div class="card mat-card">
-    <div id="skills">
-    <div class="card-title">
+  <div id="skills">
+    <div class="data-container">
+      <div class="card-title">
+        <h2>Skills</h2>
+        <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
+      </div>
       <ul class="items-list">
         <li *ngFor="let skills of skillsList">
-          <div class="data-container">
-            <h3> {{ skills.name }}</h3>
-            <div class="image-container">
-              <a href="#">
-              <img class="logo-image" [src]="skills.img">
-            </a> 
-          </div>
-          </div>
-        <div class="list-info">
+          <div class="list-info">
+          <h4>{{skills.name}}</h4>
           <div id="boton-agregar" class="data-control">
             <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
             <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
-        </div>
+          </div>
+               <div class=".img">
+              <a href="#"><img class="logo-image" style="max-width:100%" [src]="skills.img"></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

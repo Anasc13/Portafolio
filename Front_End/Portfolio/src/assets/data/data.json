@@ -43,32 +43,30 @@
 ],
 
 "skills": [{
-    "name": "Soft skills",
-    "img": "assets/Images/soft.png"
+    "name": "Soft Skills",
+    "img": "assets/Images/soft_c.png"
 },
 {
     "name": "Hard skills",
-    "img": ""
+    "img" : "assets/Images/"
 },
 {
-    "name": "Lenguajes",
-    "img":""
+    "name": "Lenguajes de programación",
+    "img":"assets/Images/"
 },
 {
     "name": "Software",
-    "img": ""
+    "img": "assets/Images/"
 },
 {
     "name": "Idiomas",
-    "img": ""
-}
-],
+    "img": "assets/Images/"
+}],
+
 "achivements": [{
     "name":" "
 },
 {
     "name":" "
-}
-]
-
+}]
 }

@@ -31,31 +31,4 @@
     </ul>
   </div>
 </div>
-<div id="language">
-    <div class="card-title">
-      <h2>Idiomas</h2>
-      <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
-    </div>
-    <div>
-      <ul class="items-list">
-        <li *ngFor="let language of laguageList">
-          <div class="data-container">
-            <div id="flag-image" class="logo-image-container">
-              <img class="logo-image" [src]="language.img">
-            </div>
-        </div>
-          <div class="list-info">
-            <div id="boton-agregar" class="data-control">
-              <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
-              <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
-            </div>
-            <div id="lang-list">
-              <li> {{language.language}}</li>
-              <li> {{language.level}}</li>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>

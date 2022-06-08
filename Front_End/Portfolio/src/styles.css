@@ -46,6 +46,7 @@ div#Logo-AP img{
 }
 
 div.mat-card {
+    display: flex;
     padding: 20px;
     margin:10px 10px;
     margin-top:0;
@@ -171,50 +172,21 @@ div#descripcion div.card-body h2{
     margin-bottom:0px;
 }
 
-div#boton-editar a {
-    margin-top: -35px;
-    margin-left: 170px;
-    float:inline-end;
-    display: flex;
-}
-
-div#boton-agregar {
-    margin-left: 40%;
-    margin-top: -0.5%;
-    display: flex;    
-}
-
-div#language {
-    margin-left: 75%;
-    margin-top: -22%
-}
-
-div#lang-list li{
-    list-style-type: circle;
-    font-weight:400;
-    font-size: 1rem;
-    line-height: 1rem;
-    color: #104040;
-}
-
 ul.items-list {
     list-style: none inside;
 }
 
 ul.items-list li{
+    margin-top: -0.5px;
     display: flex;
 }
 
 ul.items-list li div.data-container a {
-    display: flex;
     color: #104040;
 }
 
 ul.items-list li div.list-info{
     flex-grow: 1;
-    margin-top: -20px;
-    margin-bottom: 50px;
-    display: flex;
 }
 
 ul.items-list li div.list-info h4{
@@ -239,12 +211,17 @@ ul.items-list li div.data-container div.logo-image-container a img{
     height: 80px;
 }
 
-div.data-container div#flag-image img{
-    z-index: 1;
-    margin-left: -20px;
-    margin-right: 15px;
-    width: 50px;
-    height: 30px;
+div#boton-editar a {
+    margin-top: -35px;
+    margin-left: 99%;
+    float:inline-end;
+    display: flex;
+}
+
+div#boton-agregar {
+    display: flex; 
+    float:inline-end;
+    margin-left: 95%;
 }
 
 .btn-primary {
