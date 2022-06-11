@@ -1,33 +1,41 @@
 <div class="card mat-card">
   <div id="projects">
-  <div class="card-title">
-    <h2>Experiencia</h2>
-    <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
+    <div class="card-title">
+      <h2>Proyectos</h2>
+      <div id="boton-editar" class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
+    </div>
+    <div>
+      <ul class="items-list">
+        <li *ngFor="let projects of projectsList">
+          <div class="data-container">
+            <div class="logo-image-container">
+              <a href="#"><img class="logo-image" [src]="projects.img"></a>
+            </div>
+          </div>
+          <div class="list-info">
+            <div id="boton-agregar" class="data-control">
+              <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+              <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
+            </div>
+            <div>
+              <div class="list-info">
+                <div id="boton-agregar" class="data-control">
+                  <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                  <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
+                </div>
+                <div>
+                   <h4>{{projects.name}}</h4>
+                   <p>{{projects.description}}</p>
+                   <p>Año de inicio: {{projects.start}}</p>
+                   <p>Año de finalización: {{projects.finish}}</p>
+                   <p>Más información: {{projects.link}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div>
-    <ul class="items-list">
-      
-        <div class="data-container">
-          <div class="logo-image-container">
-            <a href="#">
-            <img class="logo-image" src="not available yet">
-          </a> 
-        </div>
-        </div>
-      <div class="list-info">
-        <div id="boton-agregar" class="data-control">
-          <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
-          <div class="btn-edit d-md-flex"><a href="#" class="btn-right"><i class="fa fa-trash "></i></a></div>
-      </div>
-      <div>
-          <h4>proyecto</h4>
-          <p>proyecto</p>
-          <p>Año de inicio: 2000</p>
-          <p>Año de finalización: 2001</p>            
-        </div>
-      </div>
-    </ul>
-</div>
-</div>
-</div>
 

@@ -42,7 +42,8 @@
 }
 ],
 
-"skills": [{
+"skills": [
+{
     "name": "Soft Skills",
     "img": "assets/Images/soft_c.png"
 },
@@ -63,10 +64,27 @@
     "img": "assets/Images/"
 }],
 
-"achivements": [{
-    "name":" "
+"projects": [
+{
+    "img": "assets/Images/",
+    "name":"Mi portfolio",
+    "description": "Aplicación de cv para Argentina Programa",
+    "start": 2022,
+    "finish": 2022,
+    "link": "na"
 },
 {
-    "name":" "
-}]
+    "img": "assets/Images/",
+    "name":"Vizualizaciones de resultados electorales",
+    "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
+    "start": 2020,
+    "finish": 2022,
+    "link": "na"
+}],
+
+"logIn": 
+{
+    "username": "anasc",
+    "password": "4682coding#"
+}
 }

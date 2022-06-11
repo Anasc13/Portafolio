@@ -12,6 +12,8 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LogInComponent } from './componentes/log-in/log-in.component';
+import { AddLoginComponent } from './componentes/add-login/add-login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LogInComponent,
+    AddLoginComponent
   ],
   imports: [
     BrowserModule,
