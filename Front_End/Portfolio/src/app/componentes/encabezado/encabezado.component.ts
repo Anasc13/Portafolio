@@ -18,11 +18,14 @@ export class EncabezadoComponent implements OnInit {
   showLogIn: boolean = false;
   subscription?: Subscription;  
 
-  constructor(private datosPortfolio:PortfolioService, private AuthService: AuthService, private router: Router) { 
-    this.subscription = this.AuthService.logIn()
-                              .subscribe((value: boolean) => this.showLogIn = value )
+  constructor(
+    private datosPortfolio:PortfolioService, 
+    private AuthService: AuthService,
+    private router: Router) {
+    this.subscription = this.AuthService.onToggle()
+                              .subscribe((value) => this.showLogIn = value )
   }
-     
+    
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
       console.log(data);
@@ -34,8 +37,8 @@ export class EncabezadoComponent implements OnInit {
     this.AuthService.togglelogIn();
   }
 
+  
   hasRoute(router: string){
     return this.router.url === router
   }
- 
 }

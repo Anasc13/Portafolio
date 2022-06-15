@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { InfoPersonalComponent } from './componentes/info-personal/info-personal.component';
@@ -14,6 +15,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogInComponent } from './componentes/log-in/log-in.component';
 import { AddLoginComponent } from './componentes/add-login/add-login.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { AddLoginComponent } from './componentes/add-login/add-login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
