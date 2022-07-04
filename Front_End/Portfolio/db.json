@@ -1,0 +1,80 @@
+{
+  "LogoAP":"assets/Images/solo_logo.png",
+  "backImage": "assets/Images/bosques2.png",
+  "profileImage": "assets/Images/Perfil_circle.JPG",
+  "name": "Ana Santa Cruz",
+  "postition": "Analista de datos",
+  "ubication": "Salta (Argentina)",
+  "company": {
+    "name": "OVcM",
+    "img": "assets/Images/Logo_ovcm.png",
+    "url": "http://ovcmsalta.gob.ar/"
+  },
+  "about": "Socióloga especialista en análisis y gestión de información cuantitativa y georreferenciada.",
+  "experience": [{
+    "position":"Analista de datos",
+    "company":"Observatorio de Violencia contra las Mujeres",
+    "img":"assets/Images/Logo_ovcm.png",
+    "mode":"part-time",
+    "start":"2019",
+    "end":"a la actualidad",
+    "timeElapsed": "3 años"
+  }],
+  "education": [{
+    "school":"Universidad de Buenos Aires",
+    "title":"Licenciada",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
+    "career": "Sociología",
+    "score": 8.7,
+    "start": 2003,
+    "end": 2008
+  },
+  {
+    "school":"Universidad de Buenos Aires",
+    "title":"Magister",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/UBA.svg/250px-UBA.svg.png",
+    "career": "Maestría en Políticas Ambientales y Territoriales",
+    "score": 0,
+    "start": 2013,
+    "end": "a la actualidad"
+  }],
+  "skills": [
+  {
+      "name": "Soft Skills",
+      "img": "assets/Images/soft_c.png"
+  },
+  {
+      "name": "Hard skills",
+      "img" : "assets/Images/"
+  },
+  {
+      "name": "Lenguajes de programación",
+      "img":"assets/Images/"
+  },
+  {
+      "name": "Software",
+      "img": "assets/Images/"
+  },
+  {
+      "name": "Idiomas",
+      "img": "assets/Images/"
+  }],
+  
+  "projects": [
+  {
+      "img": "assets/Images/",
+      "name":"Mi portfolio",
+      "description": "Aplicación de cv para Argentina Programa",
+      "start": 2022,
+      "finish": 2022,
+      "link": "na"
+  },
+  {
+      "img": "assets/Images/",
+      "name":"Vizualizaciones de resultados electorales",
+      "description": "Procesamiento y elaboración de visualizaciones en lenguaje R de resultados electorales provinciales",
+      "start": 2020,
+      "finish": 2022,
+      "link": "na"
+  }]
+}

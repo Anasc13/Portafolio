@@ -1,0 +1,14 @@
+<form class="add-form"
+(ngSubmit)="onSubmit()"
+*ngIf="editbutton"
+>
+<div class="form-control">
+    <div class="form-input">
+        <label for="about">Cambia la descripción:</label>
+        <input type="about" placeholder="Descripción" [(ngModel)]="about"/>
+        <div class="form-control-buttons">
+            <input type="submit" value="Guardar cambios" class="btn btn-block">
+        </div>
+    </div>
+</div>
+</form>

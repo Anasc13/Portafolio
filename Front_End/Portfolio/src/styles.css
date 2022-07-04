@@ -25,42 +25,50 @@ h4{
 div#up-card {
     display: flex;
     width: 100%;
-    height: 5%;
     border-color: none;
     background-color: rgb(47, 83, 65);
     border-radius: 1px;
-    justify-content: space-between;     
+    justify-content: space-between;
 } 
 
 div#Logo-AP h4{
-    display: inline-block;
+    display:inline;
+    position: relative !important;
+    float:inline;
+    height: 50px;
     padding:5px;
     font-size:1.1rem;
     color: #f4f5f8;
     font-weight:550;
-    line-height: 0.5;       
+    line-height: 0.5;
 }
 
 div#Logo-AP img{
-    display: inline-block;
-    height: 5%;
-    width: 20%;
+    display: inline;
+    float:inline-start;
+    position: relative !important;
+    height: 50px;
+    width: 75px;
 }
 
 div#social-media {
-    display: inline-block;
-    position: flex;
-    width: 10%;
-    height: 10%;
+    display: inline;
+    width: 12%;
+    position: relative !important;
 }
 
 button#boton-logIn {
-    display: block;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
-    font-family: inherit;
+    font-family: inherit; 
+    color: #f4f5f8; 
+    display: inline;
+    width: 120px; 
+    float:inline-end;
+    margin-top: 5px;
+    position: relative !important;
 }
 
 div.mat-card {
@@ -101,15 +109,6 @@ div#boton-perfil a{
     margin-left: 150px;
 }
 
-div#info-actions {
-    display: flex;
-}
-
-div#info-actions button{
-    margin-right: 8px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
 
 div#info-contact span {
     font-size:1rem;
@@ -229,11 +228,15 @@ ul.items-list li div.data-container div.logo-image-container a img{
     height: 80px;
 }
 
-div#boton-editar a {
-    margin-top: -35px;
-    margin-left: 99%;
+button#boton-editar {
     float:inline-end;
     display: flex;
+    background-color: rgb(153, 172, 162);
+    color: #104040;
+    cursor: pointer;    
+    border-color: rgb(153, 172, 162);
+    text-decoration: none;
+    font-size: 20px;    
 }
 
 div#boton-agregar {
@@ -265,39 +268,53 @@ div#boton-agregar {
     cursor: pointer;
 }
 
-.btn-block {
-    display: block;
-    width: 100%;
+form.add-form div.form-control{
+    margin: 20px 0px;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background: rgb(153, 172, 162);
+    border-color:rgb(33, 58, 45);
+    border-radius: 10px;
+    font-weight:400;
+    font-size: 1.2rem;
 }
 
-.form-control {
-    margin: 20px 0;
+div.form-input {
+    background-color: rgb(153, 172, 162);
+    border-color:rgb(33, 58, 45);
+    border-radius: 32px;
+    font-weight:400;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
 }
+
+div.form-input input{
+    border-color:rgb(47, 83, 65);
+    border: 1px solid;
+    font-weight:400;
+    font-size: 1.2rem;
+    width: 100%;    
+}
+
+div.form-control-buttons input.btn-block {
+    display: block;
+    width: 20%;
+    background: rgb(33, 58, 45);
+    color: rgb(216, 241, 171);
+    border-color: rgb(47, 83, 65);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    margin-top: 10px;
+}
+
+
 
 .form-control label {
     display: block;
 }
 
-.form-control input {
-    width: 100%;
-    height: 40px;
-    margin: 5px;
-    padding: 3px 7px;
-    font-size: 17px;
-}
-
-.form-control-check {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.form-control-check label {
-    flex: 1;
-}
-
-.form-control-check input {
-    flex: 2;
-    height: 20px;
-}
 

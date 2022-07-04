@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/servicios/auth.service';
+import { ButtonService } from 'src/app/servicios/buttons.service';
 import { Subscription } from 'rxjs';
-
 
 @Component({
   selector: 'app-encabezado',
@@ -13,32 +11,26 @@ import { Subscription } from 'rxjs';
 
 export class EncabezadoComponent implements OnInit {
   miPortfolio:any;
-
-  title:string = 'Log in';
   showLogIn: boolean = false;
-  subscription?: Subscription;  
+  subscription?: Subscription;
+  
 
   constructor(
-    private datosPortfolio:PortfolioService, 
-    private AuthService: AuthService,
-    private router: Router) {
-    this.subscription = this.AuthService.onToggle()
+    private datosPortfolio:PortfolioService,
+    private buttonService: ButtonService,) {      
+      this.subscription = this.buttonService.onToggle()
                               .subscribe((value) => this.showLogIn = value )
   }
     
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
+    this.datosPortfolio.obtenerDatos().subscribe((data) => {
       console.log(data);
       this.miPortfolio=data;
     });
   }
 
-  togglelogIn (){
-    this.AuthService.togglelogIn();
-  }
+    togglelogIn (){
+      this.buttonService.togglelogIn();
+    }
 
-  
-  hasRoute(router: string){
-    return this.router.url === router
-  }
 }

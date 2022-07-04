@@ -8,12 +8,11 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
   educationList:any;
-
-
+  
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
+    this.datosPortfolio.obtenerDatos().subscribe((data) => {
       this.educationList = data.education;
     });
   }

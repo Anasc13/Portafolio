@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ButtonService } from 'src/app/servicios/buttons.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,21 +8,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './add-login.component.html',
   styleUrls: ['./add-login.component.css']
 })
-export class AddLoginComponent implements OnInit {
-  form: FormGroup;
-  showLogIn: boolean = false;
 
-  // Inyectar en el constructor el formBuilder
-  constructor(private formBuilder: FormBuilder){ 
-    ///Creamos el grupo de controles para el formulario de login
+export class AddLoginComponent implements OnInit {
+form: FormGroup;
+showLogIn: boolean = false;
+subscription?: Subscription;
+ 
+  constructor (private buttonService: ButtonService, 
+    private formBuilder: FormBuilder) {      
+    this.subscription = this.buttonService.onToggle()
+                            .subscribe((value) => this.showLogIn = value );
     this.form= this.formBuilder.group({
       password:['',[Validators.required, Validators.minLength(8)]],
       email:['', [Validators.required, Validators.email]],
-   })
-  }
+    })
+    }
 
   ngOnInit() {}
-
+  
   get Password(){
     return this.form.get("password");
   }
@@ -36,9 +41,9 @@ export class AddLoginComponent implements OnInit {
   get MailValid() {
     return false
   }
- 
 
-  onEnviar(event: Event){
+
+  onSubmit (event: Event){
     // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault; 
  
@@ -46,11 +51,9 @@ export class AddLoginComponent implements OnInit {
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
       alert("Todo salio bien ¡Enviar formuario!")
-      return
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
     }
- 
-  }
-}
+   }
+ }

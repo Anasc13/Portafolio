@@ -11,10 +11,14 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LogInComponent } from './componentes/log-in/log-in.component';
-import { AddLoginComponent } from './componentes/add-login/add-login.component';
+import { LogInComponent } from './LogIn/log-in/log-in.component';
+import { UserLogInComponent } from './LogIn/user-log-in/user-log-in.component';
+import { EditarComponent } from './botones/editar/editar.component';
+import { EditFormComponent } from './acerca/edit-form/edit-form.component';
+import { AddLoginComponent } from "./LogIn/add-login/AddLoginComponent";
+import { ItemsComponent } from './acerca/items/items.component';
+
 
 
 @NgModule({
@@ -28,14 +32,19 @@ import { AddLoginComponent } from './componentes/add-login/add-login.component';
     SkillsComponent,
     ProyectosComponent,
     LogInComponent,
-    AddLoginComponent
+    AddLoginComponent,
+    UserLogInComponent,
+    EditarComponent,
+    EditFormComponent,
+    ItemsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
