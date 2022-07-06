@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ButtonService } from 'src/app/servicios/buttons.service';
-import { Edit } from 'src/app/acerca/edit';
+import { Acerca } from 'src/app/acerca/acerca';
 
 @Component({
   selector: 'app-edit-form',
@@ -10,7 +10,7 @@ import { Edit } from 'src/app/acerca/edit';
 })
 
 export class EditFormComponent implements OnInit {
-  @Output() onAddEdit: EventEmitter<Edit> =new EventEmitter();
+  @Output() OnAddAcerca: EventEmitter<Acerca> =new EventEmitter();
 
   about: string = '';
   editbutton: boolean = true;
@@ -27,10 +27,9 @@ export class EditFormComponent implements OnInit {
       alert('Agrega una descripción!');
       return; 
     }
-
     const {about} = this;
-    const newEdit = {about};
+    const newAcerca = {about};
   
-    this.onAddEdit.emit(newEdit);
+    this.OnAddAcerca.emit(newAcerca);
   }
 }

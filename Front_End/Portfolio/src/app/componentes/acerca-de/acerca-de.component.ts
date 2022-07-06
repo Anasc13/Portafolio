@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { ButtonService } from 'src/app/servicios/buttons.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
+import { Acerca } from 'F:/GIT/Portafolio/Front_End/Portfolio/src/app/acerca/acerca';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,29 +11,39 @@ import { Subscription } from 'rxjs';
 })
 export class AcercaDeComponent implements OnInit {
  
-  miPortfolio:any; 
+  acercas: Acerca[] = [];
+  miPortfolio:any;
   subscription?: Subscription;
   editbutton: boolean = true;
 
-  constructor(private datosPortfolio:PortfolioService,
+  constructor(
+    private datosPortfolio:PortfolioService,
     private buttonService: ButtonService) {      
     this.subscription = this.buttonService.onToggle()
-                            .subscribe((value) => this.editbutton= value)}
+      .subscribe((value) => this.editbutton= value)
+    }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      console.log(data);
-      this.miPortfolio = data;
+  // Like Promise
+     this.datosPortfolio.obtenerDatos().subscribe((data) => {
+      this.miPortfolio=data;
     });
-  } 
-  
-   AddEdit(miPortfolio:any){
-    this.datosPortfolio.agregarDatos().subscribe((data) =>( 
-      this.miPortfolio.push(data))
-    )
   }
-
+                        
+  AddAcerca(acerca:Acerca){
+    this.datosPortfolio.agregarDatos().subscribe((acerca) =>( 
+        this.acercas.push(acerca))
+        );
+  }
+                          
+  deleteAcerca(acerca:Acerca){
+    this.datosPortfolio.borrarDatos()
+        .subscribe(()=>(
+        this.acercas = this.acercas.filter( t => t.about !== acerca.about )
+  ))
+  }
+                          
   toggleEditbutton (){
     this.buttonService.toggleEdit();
   }
- }
+}

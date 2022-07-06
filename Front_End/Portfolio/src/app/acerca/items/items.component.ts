@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Edit } from 'src/app/acerca/edit';
-import { EDITBD } from 'src/app/acerca/EDITBD';
+import { Acerca } from 'src/app/acerca/acerca';
+import { ACERCAS } from 'src/app/acerca/ListAcerca';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,16 +10,18 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class ItemsComponent implements OnInit {
-  @Input() edit: Edit = EDITBD[0]
-  @Output() OnDeleteEdit: EventEmitter<Edit["about"]> = new EventEmitter()
+  @Input() acerca: Acerca = ACERCAS[0]
+  @Output() OndeleteAcerca: EventEmitter<Acerca> = new EventEmitter()
 
-  faTimes = faTimes;
-  
+    faTimes = faTimes;
+
   constructor() { }
 
-  ngOnInit(): void {}
-  
-  onDelete(edit: Edit) {
-    this.OnDeleteEdit.emit(edit.about);
+  ngOnInit(): void {
   }
+
+  onDeleteAcerca(acerca:Acerca) {
+    this.OndeleteAcerca.emit(acerca);
+  }
+
 }

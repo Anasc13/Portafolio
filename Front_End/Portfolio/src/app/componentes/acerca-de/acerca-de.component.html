@@ -7,13 +7,18 @@
       (btnClick)="toggleEditbutton()"
   ></app-editar>
       <app-edit-form
-      (onAddEdit)="AddEdit($event)"
+      (OnAddAcerca)="AddAcerca($event)"
       ></app-edit-form>
  </h2>
   <div id="descripcion">
       <div class="card-body">
         <h4>{{miPortfolio.about}}</h4>
-       </div>
+          <app-items
+          *ngFor="let acerca of acercas"
+          (onDeleteAcerca) ="deleteAcerca(acerca)"
+  >
+          </app-items>
+        </div>
     </div>
   </div>
 </div>
